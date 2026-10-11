@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+<script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+<script type="text/javascript" src="javascript.js" defer></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/mathjs/3.3.0/math.min.js></script>
+</head>
+
+
+
+
+
+	<title>NNVis</title>
+</head>
+	<body>
+    
+    <div>
+      <h1> NNVis </h1>
+    </div>
+    <figure class="quote">
+          <blockquote>
+               [Aprendizado de máquina é o] campo de estudo que dá aos computadores a habilidade de aprender sem serem explicitamente programados
+          </blockquote>
+          <figcaption>
+            &mdash; Arthur Samuel , <cite>Too Big to Ignore: The Business Case for Big Data</cite>  </figcaption>
+    </figure>
+
+
+    <div id="generate">
+          <div id="network-wrapper"></div>
+
+          <div id="config">
+
+                  <!-- Campo que controla quantas camadas haverá -->
+                  <label for="layer">N° de Camadas Ocultas </label>
+                  <input class="parametros" id="layer"  type="number" placeholder="Num camadas"  min="1" max ="10">
+
+                  <!-- Aqui dentro surgirão os inputs de cada camada -->
+                  <div id="layers-wrapper"></div>
+
+                  <button id="btn-gerar">Gerar</button>
+      </div>
+</div>
+
+		<!-- <input class = "parametros", type="text">-->
+	</body>
+</html>
