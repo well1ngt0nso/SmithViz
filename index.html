@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+<script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+<script type="text/javascript" src="javascript.js" defer></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/mathjs/3.3.0/math.min.js></script>
+</head>
+
+
+
+
+
+
+	<title>SmithViz</title>
+</head>
+	<body>
+    
+    <div>
+      <h1> SmithViz </h1>
+    </div>
+    <figure class="quote">
+          <blockquote>
+               Se você quer encontrar os segredos do universo, pense em termos de energia, frequência, vibração e ondas eletromagnéticas.
+          </blockquote>
+          <figcaption>
+            &mdash; Nikola Tesla , <cite>Em seus estudos...</cite>  </figcaption>
+    </figure>
+
+
+    <div id="generate">
+          <div id="network-wrapper"></div>
+
+          <div id="config">
+
+                  <!-- Campo que controla quantas camadas haverá -->
+                  <label for="layer">N° de Camadas Ocultas </label>
+                  <input class="parametros" id="layer"  type="number" placeholder="Num camadas"  min="1" max ="10">
+
+                  <!-- Aqui dentro surgirão os inputs de cada camada -->
+                  <div id="layers-wrapper"></div>
+
+                  <button id="btn-gerar">Gerar</button>
+      </div>
+</div>
+
+		<!-- <input class = "parametros", type="text">-->
+	</body>
+</html>
