@@ -5,12 +5,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const camadasInp = document.getElementById('layer');
     const wrapper = document.getElementById('layers-wrapper');
-    const btnGerar = document.getElementById('btn-gerar');
+    //const btnGerar = document.getElementById('btn-gerar');
 
 
     /* ─────────────────────────
      Atualiza campos de camada
-     ───────────────────────── */
+     ───────────────────────── 
     camadasInp.addEventListener('input', () => {
         const qtd = parseInt(camadasInp.value, 10) || 0;
         if(qtd < 11){
@@ -21,9 +21,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     });
 
-    /* ─────────────────────────
+    ─────────────────────────
     N° entrada mínima e máxima
-     ───────────────────────── */
+     ───────────────────────── 
 
     camadasInp.addEventListener('input', () => {
         const valor = camadasInp.value.trim();
@@ -64,13 +64,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    /* ─────────────────────────
+    
+
+    /*  
+    ─────────────────────────
      Botão "Gerar"
-     ───────────────────────── */
+     ───────────────────────── 
     btnGerar.addEventListener('click', () => {
-        /* ───────────
+         ───────────
          1. Coletar dados
-         ─────────── */
+         ─────────── 
         //const entradas = parseInt(entradasInp.value, 10) || 0;
         //const saidas   = parseInt(saidasInp.value,   10) || 0;
         const camadas = parseInt(camadasInp.value, 10) || 0;
@@ -84,15 +87,21 @@ document.addEventListener('DOMContentLoaded', () => {
         //const estrutura = [entradas, entradas, ...neuroniosOcultas, saidas,saidas];
         
       
-        /* ───────────
-         2. Desenhar
-         ─────────── */
-        desenharRede(estrutura);
+
        
-    });
+    }); 
+    */
+
+
+
+    /* ───────────
+    2. Desenhar
+    ─────────── */
+    desenharRede();
+
 });
 
-function desenharRede(estrutura) {
+function desenharRede() {
     const gerar = document.getElementById('generate');
 
     const ids = []; //neurônios
@@ -107,16 +116,16 @@ function desenharRede(estrutura) {
     var r = 20;
     var lineDi = 20; // Distãncia entre linhas
 
-    const colunas = estrutura.length; //nnumero de camadas 
-    const maxNeuro = Math.max(...estrutura); // maior nº de neurônios
-    const linhasGrade = 1 + maxNeuro; // 1 (bias) + visíveis 
+    //const colunas = estrutura.length; //nnumero de camadas 
+    //const maxNeuro = Math.max(...estrutura); // maior nº de neurônios
+    ///const linhasGrade = 1 + maxNeuro; // 1 (bias) + visíveis 
     
 
     /* ─── dimensões do SVG ─── */
     const wrapper = document.getElementById('network-wrapper');
     wrapper.innerHTML = '';
 
-    const wSVG = 1000
+    const wSVG = 1200
     const hSVG = 1000
     const MwSVG = 1100;
     const MhSVG = hSVG / 2;
@@ -343,8 +352,8 @@ function desenharRede(estrutura) {
     ids_legend[0] = "ele_3";
 
     var x_center = 550;
-    var y_center = 400;
-    var px_raio = 400;
+    var y_center = 340;
+    var px_raio = 320;
 
     function generate_x(r){
 
@@ -479,8 +488,8 @@ function desenharRede(estrutura) {
     plot_circles_x();
 
 
-    generateCircle3(550, 0, 950, 400, generate_p(1), "red",ids)
-    generateCircle3(teste.re*px_raio +x_center,  teste.im * px_raio +y_center, 950, 400, generate_p(3), "red",ids)
+    generateCircle3(550, -px_raio + y_center, px_raio + x_center, y_center, generate_p(1), "red",ids)
+    generateCircle3(teste.re*px_raio +x_center,  teste.im * px_raio +y_center, px_raio + x_center, y_center, generate_p(3), "red",ids)
 
 
     //generateCircle(zz.re*px_raio +x_center+400, zz.im * px_raio +y_center, 5, "black", ids); 

@@ -44,7 +44,7 @@ html, body {
 }
 
 input {
-	width: 100%;
+	width: 40%;
 	margin-bottom: 5px;
 	box-sizing: border-box; /* largura agora inclui border e padding */
 	margin-left: 0%;
@@ -62,13 +62,14 @@ label {
   width: 200px;
   margin: auto;
   text-align: center; /* centraliza o texto dentro do label */
-  margin-bottom: 4px;
+  margin-bottom: 8px;
   margin-top: 4px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
 #config {
 	
-	width: 190px;
+	width: 300px;
 	height: auto;
 	border: 1px solid hsl(0, 0%, 41%, 0.3);
 	border-radius: 5px;
@@ -76,4 +77,10 @@ label {
 	top: 4px;
 	right: 20px;
 	padding: 10px;
+}
+
+p{
+  width: 8%;
+  display: inline-block;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }

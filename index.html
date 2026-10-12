@@ -36,8 +36,23 @@
           <div id="config">
 
                   <!-- Campo que controla quantas camadas haverá -->
-                  <label for="layer">N° de Camadas Ocultas </label>
-                  <input class="parametros" id="layer"  type="number" placeholder="Num camadas"  min="1" max ="10">
+                  <label for="layer">IMPEDÂNCIAS</label>
+                  <p>Z0: </p>
+                  <input class="parametros" id="resistencia1"  type="number" placeholder="Parte real"  max="10">
+                  <p>+j</p>
+                  <input class="parametros" id="reatancia1"  type="number" placeholder="Prte ima" max="10">
+
+                  <p>ZA: </p>
+                  <input class="parametros" id="resistencia2"  type="number" placeholder="Parte real"  max="10">
+                  <p>+j</p>
+                  <input class="parametros" id="reatancia2"  type="number" placeholder="Prte ima" max="10">
+
+                  <p>ZB: </p>
+                  <input class="parametros" id="resistencia3"  type="number" placeholder="Parte real"  max="10">
+                  <p>+j</p>
+                  <input class="parametros" id="reatancia3"  type="number" placeholder="Prte ima" max="10">
+
+
 
                   <!-- Aqui dentro surgirão os inputs de cada camada -->
                   <div id="layers-wrapper"></div>
