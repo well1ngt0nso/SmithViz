@@ -1,6 +1,4 @@
-# NN
-O NNVis é um projeto open-source focado na visualização gráfica e interativa de redes neurais. Com ferramentas para analisar camadas, neurônios, pesos e ativações, este repositório é dedicado a pesquisadores, estudantes e entusiastas de IA que querem entender como as redes neurais funcionam por dentro.
+# SmithViz
+O   SmithViz é um projeto focado na visualização gráfica e interativa de impedâncias e suas caracteristicas quando empregadas em uma linha de transmissão, focando em aumentar a abstração, além de facilitar a resolução de problemas.
 
-
-
-* Para rodar o nosso projeto, acesse o link direto para o [NNVis](https://well1ngt0nso.github.io/NNVis/).
+* Para rodar o nosso projeto, acesse o link direto para o [SmithViz](https://well1ngt0nso.github.io/SmithViz/).
