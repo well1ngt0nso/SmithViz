@@ -1,0 +1,138 @@
+
+    //const a = math.complex(2, 3)     // Complex 2 + 3i
+    //const b = math.complex('4 - 2i') // Complex 4 - 2i
+
+    // math.re(a)                       // Number 2
+    // math.im(a)                       // Number 3
+    // math.conj(a)                     // Complex 2 - 3i
+ 
+    //console.log(math.add(a, b));                   // Complex 6 + i
+    // math.multiply(a, 2)              // Complex 4 + 6i
+    // math.sqrt(-4)
+
+
+function plot_point2(R, X, Z_0, ids_, svg_){
+        console.log('Entrada: ')
+        const Zl = math.complex(R, X) ;    
+        const Z0 = math.complex(Z_0,0) ; 
+
+        const zl = math.divide(Zl, Z0)
+        console.log(Zl);
+        const z0 = math.complex(1,0) ; 
+
+
+        console.log('Entrada normalizada: ')
+
+        console.log(zl)
+
+        var a = math.divide(math.subtract(zl, z0), math.add(zl, z0));
+        console.log('Coeficiente de reflexão: ')
+        a =   math.conj(a);                     // Complex 2 - 3i
+
+        console.log(a);
+
+        generateCircle(a.re*px_raio +x_center, a.im * px_raio +y_center, 5, "purple", ids_, svg_); 
+
+        return a;
+        
+}
+
+ /* ─────────────────────────
+     Atualiza campos de camada
+     ───────────────────────── 
+    camadasInp.addEventListener('input', () => {
+        const qtd = parseInt(camadasInp.value, 10) || 0;
+        if(qtd < 11){
+            renderizarCamposCamada(qtd);
+        }else{
+               renderizarCamposCamada(0);
+        }
+
+    });
+
+
+
+        //   const camadasInp = document.getElementById('layer');
+     //   const camadasInp = document.getElementById('layer');
+
+    //const camadasInp = document.getElementById('layer');
+    //const wrapper = document.getElementById('layers-wrapper');
+    //const btnGerar = document.getElementById('btn-gerar');
+
+
+
+
+
+    ─────────────────────────
+    N° entrada mínima e máxima
+     ───────────────────────── 
+
+    camadasInp.addEventListener('input', () => {
+        const valor = camadasInp.value.trim();
+        const qtd = parseInt(valor, 10);
+
+        if (valor === "" || isNaN(qtd) || qtd < 1) {
+            camadasInp.setCustomValidity("O mínimo de camadas 1");
+            camadasInp.reportValidity();
+            camadasInp.value = ""; 
+        } else if (qtd > 10){
+            camadasInp.setCustomValidity("O máximo de camadas é 10");
+            camadasInp.reportValidity();
+            camadasInp.value = ""; 
+            
+            
+        }else {
+             camadasInp.setCustomValidity(""); // limpa erro
+        camadasInp.reportValidity();
+        camadasInp.value = qtd;
+         
+        }
+    });
+
+
+
+
+    function renderizarCamposCamada(qtd) {
+        wrapper.innerHTML = ''; // limpa SÓ o sub‑contêiner
+
+        for (let i = 1; i <= qtd; i++) {
+            const inp = document.createElement('input');
+            inp.type = 'number';
+            inp.classList.add('parametros', 'layer-field');
+            inp.name = `neurons_layer_${i}`;
+            inp.placeholder = `Neurônios camada ${i}`;
+            inp.min = 1;
+            wrapper.appendChild(inp);
+        }
+    }
+
+
+
+    
+
+    //gerar legenda
+    //generateSquare(wSVG - 400 , hSVG - 29, ids_legend, svg);
+    //const square_legend = document.getElementById(ids_legend[0]);
+    //square_legend.setAttribute('id', "ele_0");
+    //ids_legend[0] = "ele_0";
+
+    //generateCircle(wSVG - 300, hSVG - 29, 20, "black", ids_legend, svg);
+    //const circle_legend = document.getElementById(ids_legend[1]);
+    //circle_legend.setAttribute('id', "ele_1");
+    //ids_legend[1] = "ele_1";
+
+    //generatePolygon(wSVG -200, hSVG - 29, ids_legend, svg);
+    //const polygon_legend = document.getElementById(ids_legend[2]);
+    //polygon_legend.setAttribute('id', "ele_2");
+    //ids_legend[2] = "ele_2";
+
+    //generateCircle(wSVG - 100 , hSVG - 29, 20, "red", ids_legend, svg);
+    //const bias_legend = document.getElementById(ids_legend[3]);
+    //bias_legend.setAttribute('id', "ele_3");
+    //ids_legend[0] = "ele_3";
+
+
+
+    //plot_point(100, 20, 50);
+
+    //console.log(generate_r(2));

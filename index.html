@@ -5,7 +5,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="styles.css">
 <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+<script type="text/javascript" src="formas.js" defer></script>
+<script type="text/javascript" src="circles_smith.js" defer></script>
+<script type="text/javascript" src="functions_smith.js" defer></script> 
+
 <script type="text/javascript" src="javascript.js" defer></script>
+
+
 <script src=https://cdnjs.cloudflare.com/ajax/libs/mathjs/3.3.0/math.min.js></script>
 </head>
 
@@ -38,12 +44,12 @@
                   <!-- Campo que controla quantas camadas haverá -->
                   <label for="layer">IMPEDÂNCIAS</label>
                   <p>Z0: </p>
-                  <input class="parametros" id="resistencia1"  type="number" placeholder="Parte real"  max="10">
+                  <input class="parametros" id="resistencia1"  type="number" placeholder="Parte Real"  max="10">
                   <p>+j</p>
                   <input class="parametros" id="reatancia1"  type="number" placeholder="Prte ima" max="10">
 
                   <p>ZA: </p>
-                  <input class="parametros" id="resistencia2"  type="number" placeholder="Parte real"  max="10">
+                  <input class="parametros" id="resistencia2"  type="number" placeholder="Parte Real"  max="10">
                   <p>+j</p>
                   <input class="parametros" id="reatancia2"  type="number" placeholder="Prte ima" max="10">
 
@@ -57,7 +63,7 @@
                   <!-- Aqui dentro surgirão os inputs de cada camada -->
                   <div id="layers-wrapper"></div>
 
-                  <button id="btn-gerar">Gerar</button>
+                  <button id="btn-gerar">Adicionar Ponto</button>
       </div>
 </div>
 
